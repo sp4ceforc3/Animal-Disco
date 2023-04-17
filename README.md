@@ -1,0 +1,2 @@
+# Animal-Disco
+ Create a disco with different animals dancing on the screen. The player can move around and perform stylish dance moves. A package containing the default assets can be found on the Assets tab, but you are welcome to use your own instead. In this particular exercise the tasks will ask you to choose sprites from the package. If you want, you can replace all of them with your own (including Doge).
