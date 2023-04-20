@@ -18,11 +18,11 @@ public class PlayerHandling : MonoBehaviour
     IEnumerator scaleOverTime(Transform objectToScale, Vector3 toScaleUp, Vector3 toScaleDown, float duration)
     {
         //Make sure there is only one instance of this function running
-        if (isDancing)
+        if (scaling)
         {
             yield break; ///exit if this is still running
         }
-        isDancing = true;
+        scaling = true;
 
         //Get the current scale of the object to be moved
         Vector3 startScaleSize = objectToScale.localScale;
@@ -44,7 +44,7 @@ public class PlayerHandling : MonoBehaviour
             yield return null;
         }
         danceTimer = 0f;
-        isDancing = false;
+        scaling = false;
     }
 
     // from https://stackoverflow.com/questions/37586407/rotate-gameobject-over-time
@@ -79,6 +79,20 @@ public class PlayerHandling : MonoBehaviour
         rotating = false;
     }
 
+    IEnumerator DanceMoveLinusBasic()
+    {        //Make sure there is only one instance of this function running
+        if (isDancing)
+        {
+            yield break; ///exit if this is still running
+        }
+        isDancing = true;
+        Vector3 scaleUp = new Vector3(1.5f, 1.5f, 1f);
+        StartCoroutine(scaleOverTime(player.transform, scaleUp, player.transform.localScale, 1f));
+
+        yield return new WaitForSeconds(2);
+        
+        isDancing = false;      
+    }
     void Start()
     {
     }
@@ -89,7 +103,10 @@ public class PlayerHandling : MonoBehaviour
         
         if (isDancing) return;
 
-        if (Input.GetKey(KeyCode.Alpha1))
+        
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+            StartCoroutine(DanceMoveLinusBasic());
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             //StartCoroutine(scaleOverTime(player.transform, new Vector3(1.5f, 1.5f, 1f), new Vector3(1f, 1f, 1f), 0.5f));
             //from https://stackoverflow.com/questions/37586407/rotate-gameobject-over-time
