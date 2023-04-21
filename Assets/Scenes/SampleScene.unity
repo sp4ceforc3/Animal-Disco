@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &76926461 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+  m_PrefabInstance: {fileID: 1527515979}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &79867381
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,6 +366,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &154541934
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1726369849}
+    m_Modifications:
+    - target: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_Name
+      value: DiscoLight (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.924956
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.8549252
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1476235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66ed61011bfb0274086a140964e49630, type: 3}
 --- !u!1 &178508627
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,6 +507,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &211966747
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1726369849}
+    m_Modifications:
+    - target: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_Name
+      value: DiscoLight (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.723849
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.8359134
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1476235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+--- !u!4 &267354859 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+  m_PrefabInstance: {fileID: 2099138377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &268867445 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+  m_PrefabInstance: {fileID: 414815301}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &278547258 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+  m_PrefabInstance: {fileID: 381480487}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &352388692
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +663,177 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &381480487
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1726369849}
+    m_Modifications:
+    - target: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_Name
+      value: DiscoLight (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.196093
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.295644
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1476235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+--- !u!1001 &391312412
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1726369849}
+    m_Modifications:
+    - target: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_Name
+      value: DiscoLight (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.363668
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.8634284
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1476235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+--- !u!1001 &414815301
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1726369849}
+    m_Modifications:
+    - target: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_Name
+      value: DiscoLight (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.147562
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8464222
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1476235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66ed61011bfb0274086a140964e49630, type: 3}
 --- !u!1 &442689138
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,6 +918,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &487419114
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1726369849}
+    m_Modifications:
+    - target: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_Name
+      value: DiscoLight (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6748354
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5032487
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1476235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66ed61011bfb0274086a140964e49630, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +1060,73 @@ Transform:
   m_Father: {fileID: 1532821235}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &583694813 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+  m_PrefabInstance: {fileID: 487419114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &624838892
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1726369849}
+    m_Modifications:
+    - target: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_Name
+      value: DiscoLight (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.9184582
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.9524703
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1476235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+--- !u!4 &710700490 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+  m_PrefabInstance: {fileID: 624838892}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &722132914
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,6 +1295,125 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &802042898
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1726369849}
+    m_Modifications:
+    - target: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_Name
+      value: DiscoLight (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.4227097
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.6303145
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1476235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+--- !u!1001 &853216080
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1726369849}
+    m_Modifications:
+    - target: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_Name
+      value: DiscoLight (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.348668
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.071033
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1476235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+--- !u!4 &897187805 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+  m_PrefabInstance: {fileID: 997054250}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &925393153
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,6 +1498,120 @@ Transform:
   m_Father: {fileID: 118655540}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &997054250
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1726369849}
+    m_Modifications:
+    - target: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_Name
+      value: DiscoLight (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.348668
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5307636
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1476235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+--- !u!1001 &1136506365
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1726369849}
+    m_Modifications:
+    - target: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_Name
+      value: DiscoLight (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.33816
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.035015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1476235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66ed61011bfb0274086a140964e49630, type: 3}
 --- !u!1 &1165393118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,6 +2032,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1307497390 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+  m_PrefabInstance: {fileID: 211966747}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1315438818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,6 +2205,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1403132573
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1726369849}
+    m_Modifications:
+    - target: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_Name
+      value: DiscoLight (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.0245066
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.376183
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1476235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+--- !u!4 &1452024804 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+  m_PrefabInstance: {fileID: 1712630514}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1453733201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,6 +2351,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1461288396 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+  m_PrefabInstance: {fileID: 5585309092073614104}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1480944444 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+  m_PrefabInstance: {fileID: 154541934}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1495767670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,6 +2458,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a32c8047bb89a0b4486ca5c8aec08813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1499286937
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1726369849}
+    m_Modifications:
+    - target: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_Name
+      value: DiscoLight (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.7638776
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.3866918
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1476235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66ed61011bfb0274086a140964e49630, type: 3}
 --- !u!1 &1505048486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1887,6 +2683,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1527515979
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1726369849}
+    m_Modifications:
+    - target: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_Name
+      value: DiscoLight (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.8254046
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.8804345
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1476235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66ed61011bfb0274086a140964e49630, type: 3}
 --- !u!1 &1532821234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1936,6 +2789,13 @@ MonoBehaviour:
   speed: 3
   player: {fileID: 1850786807}
   sr: {fileID: 1850786809}
+  discoLightPrefab: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+  discoLightContainer: {fileID: 1726369849}
+--- !u!4 &1537861064 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+  m_PrefabInstance: {fileID: 1403132573}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1545924555
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,6 +2880,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1595076326 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+  m_PrefabInstance: {fileID: 802042898}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1631787074
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,6 +2969,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1661845325 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+  m_PrefabInstance: {fileID: 391312412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1710822730
 GameObject:
   m_ObjectHideFlags: 0
@@ -2188,6 +3058,116 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1712630514
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1726369849}
+    m_Modifications:
+    - target: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_Name
+      value: DiscoLight (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.634807
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.475734
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1476235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+--- !u!1 &1726369848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1726369849}
+  m_Layer: 0
+  m_Name: DiscoLights
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1726369849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726369848}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.1558573, y: -0.8204425, z: 0.1476235}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1452024804}
+  - {fileID: 1914021859}
+  - {fileID: 1480944444}
+  - {fileID: 1661845325}
+  - {fileID: 268867445}
+  - {fileID: 76926461}
+  - {fileID: 1307497390}
+  - {fileID: 267354859}
+  - {fileID: 1537861064}
+  - {fileID: 710700490}
+  - {fileID: 278547258}
+  - {fileID: 1793576615}
+  - {fileID: 583694813}
+  - {fileID: 1987674300}
+  - {fileID: 897187805}
+  - {fileID: 1595076326}
+  - {fileID: 1461288396}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1793576615 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+  m_PrefabInstance: {fileID: 1136506365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1838312125
 GameObject:
   m_ObjectHideFlags: 0
@@ -2524,6 +3504,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1914021859 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+  m_PrefabInstance: {fileID: 853216080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1947900143
 GameObject:
   m_ObjectHideFlags: 0
@@ -2608,6 +3593,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1987674300 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+  m_PrefabInstance: {fileID: 1499286937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2043155856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2692,3 +3682,117 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2099138377
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1726369849}
+    m_Modifications:
+    - target: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_Name
+      value: DiscoLight (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.122052
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.206602
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1476235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+--- !u!1001 &5585309092073614104
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1726369849}
+    m_Modifications:
+    - target: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_Name
+      value: DiscoLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3558574
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0504425
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1476235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66ed61011bfb0274086a140964e49630, type: 3}

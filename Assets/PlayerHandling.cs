@@ -6,14 +6,17 @@ public class PlayerHandling : MonoBehaviour
 {
     // Speed of the character
     [SerializeField] float speed = 3f;
-    // Start is called before the first frame update
-    float danceTimer = 0f;
     [SerializeField] GameObject player;
     [SerializeField] SpriteRenderer sr;
+    [SerializeField] GameObject discoLightPrefab;
+    [SerializeField] Transform discoLightContainer;
+
+    Camera mainCam;
     bool isDancing = false;
     bool moving = false;
     bool scaling = false;
     bool rotating = false;
+    
 
     IEnumerator moveOverTime(Transform objectToMove, Vector3 newPos, float duration)
     {
@@ -155,8 +158,20 @@ public class PlayerHandling : MonoBehaviour
 
         isDancing = false;
     }
+
+    void AddDiscoLight()
+    {
+        Vector3 bottomLeft = mainCam.ViewportToWorldPoint(Vector3.zero);
+        Vector3 topRight = mainCam.ViewportToWorldPoint(Vector3.one);
+
+        Vector3 spawnPos = new Vector3(Random.Range(bottomLeft.x, topRight.x), Random.Range(bottomLeft.y, topRight.y), 0f);
+        
+        GameObject newDiscoLight = Instantiate(discoLightPrefab, spawnPos, Quaternion.identity, discoLightContainer);
+        newDiscoLight.AddComponent<DiscoLight>();
+    }
     void Start()
     {
+         mainCam = Camera.main;
     }
 
     // Update is called once per frame
@@ -178,6 +193,11 @@ public class PlayerHandling : MonoBehaviour
             Quaternion rotation2 = Quaternion.Euler(new Vector3(0f, 0f, 180));
             Quaternion oldRotation = player.transform.rotation;
             StartCoroutine(rotateObject(player, rotation2, oldRotation, 1f));
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            AddDiscoLight();
         }
 
 
