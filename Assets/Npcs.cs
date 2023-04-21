@@ -2,20 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHandling : MonoBehaviour
+public class Npcs : MonoBehaviour
 {
-    // Speed of the character
-    [SerializeField] float speed = 3f;
-    // Start is called before the first frame update
-    float danceTimer = 0f;
-    [SerializeField] GameObject player;
-    [SerializeField] SpriteRenderer sr;
     bool isDancing = false;
     bool moving = false;
     bool scaling = false;
     bool rotating = false;
-
-    IEnumerator moveOverTime(Transform objectToMove, Vector3 newPos, float duration)
+     IEnumerator moveOverTime(Transform objectToMove, Vector3 newPos, float duration)
     {
         if (moving)
         {
@@ -67,7 +60,6 @@ public class PlayerHandling : MonoBehaviour
             objectToScale.localScale = Vector3.Lerp(startScaleSize, toScaleDown, counter / halveDuration);
             yield return null;
         }
-        counter = 0f;
         scaling = false;
     }
 
@@ -112,89 +104,29 @@ public class PlayerHandling : MonoBehaviour
         isDancing = true;
         float duration = 1f;
         Vector3 scaleUp = new Vector3(1.5f, 1.5f, 1f);
-        StartCoroutine(scaleOverTime(player.transform, scaleUp, player.transform.localScale, duration));
+        StartCoroutine(scaleOverTime(transform, scaleUp, transform.localScale, duration));
 
         yield return new WaitForSeconds(duration);
         
         isDancing = false;      
     }
 
-    IEnumerator DanceMoveLinusAdvanced()
+    void ChooseDance()
     {
-        if (isDancing)
-        {
-            yield break;
-        }
-        isDancing = true;
+        // TODO: Replace with Coroutine which randomly chooses a basic dance move
+        // at the moment the other moves are missing for proper implementation
+        StartCoroutine(DanceMoveLinusBasic());
 
-        float duration = 0.5f;
-        
-        int movesCounter = 0;
-        Vector3 origPos = player.transform.position;
-        while (movesCounter < 10)
-        {
-            Vector3 startPos = player.transform.position;
-            Vector3 newPos = Random.insideUnitCircle.normalized;
-            newPos += transform.position;
-            newPos.z = player.transform.position.z;
-
-            //float angle = Mathf.Atan2(newPos.y, newPos.x) * Mathf.Rad2Deg;
-            //player.transform.rotation = Quaternion.Euler(0f, 0f, angle);
-
-
-            Vector3 scaleUp = new Vector3(Random.Range(0.5f, 3f), Random.Range(0.5f, 3f), 1f);
-            StartCoroutine(moveOverTime(player.transform, newPos, duration));
-            StartCoroutine(scaleOverTime(player.transform, scaleUp, player.transform.localScale, duration));
-            player.transform.rotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
-
-            yield return new WaitForSeconds(duration); 
-            movesCounter++;
-        }
-        player.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-        StartCoroutine(moveOverTime(player.transform, origPos, 1f)); 
-
-        isDancing = false;
     }
+    // Start is called before the first frame update
     void Start()
     {
+        InvokeRepeating(nameof(ChooseDance), 2f, 3f);
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        if (isDancing) return;
-
-        
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-            StartCoroutine(DanceMoveLinusBasic());
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-            StartCoroutine(DanceMoveLinusAdvanced());
-        //Dummy/Test Move at the moment
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            //StartCoroutine(scaleOverTime(player.transform, new Vector3(1.5f, 1.5f, 1f), new Vector3(1f, 1f, 1f), 0.5f));
-            //from https://stackoverflow.com/questions/37586407/rotate-gameobject-over-time
-            Quaternion rotation2 = Quaternion.Euler(new Vector3(0f, 0f, 180));
-            Quaternion oldRotation = player.transform.rotation;
-            StartCoroutine(rotateObject(player, rotation2, oldRotation, 1f));
-        }
-
-
-        Vector3 moveVector = Vector3.zero;
-        
-        if (Input.GetKey(KeyCode.W)) moveVector.y = 1;
-        if (Input.GetKey(KeyCode.A)) moveVector.x = -1;
-        if (Input.GetKey(KeyCode.S)) moveVector.y = -1;
-        if (Input.GetKey(KeyCode.D)) moveVector.x = 1;
-
-        // Normalize vector, so that magnitude for diagonal movement is also 1
-        moveVector.Normalize();
-
-        // TODO: this can be used for the NINJA Cheat later
-        //moveVector = moveVector * speedMod[indexSpeedMod];
-
-         // Frame rate independent movement
-        transform.position += Time.deltaTime * speed * moveVector;
     }
 }
