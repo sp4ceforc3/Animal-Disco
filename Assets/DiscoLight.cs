@@ -20,8 +20,9 @@ public class DiscoLight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sr = GetComponent<SpriteRenderer>();        
-        InvokeRepeating(nameof(ChangeColor), 0.1f, 5f);
+        sr = GetComponent<SpriteRenderer>();  
+        sr.color = Random.ColorHSV(hueMin, hueMax, saturationMin, saturationMax, valueMin, valueMax);      
+        InvokeRepeating(nameof(ChangeColor), Random.Range(0.5f, 1.5f), 5f);
     }
 
     // Update is called once per frame

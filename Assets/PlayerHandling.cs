@@ -167,7 +167,7 @@ public class PlayerHandling : MonoBehaviour
         Vector3 spawnPos = new Vector3(Random.Range(bottomLeft.x, topRight.x), Random.Range(bottomLeft.y, topRight.y), 0f);
         
         GameObject newDiscoLight = Instantiate(discoLightPrefab, spawnPos, Quaternion.identity, discoLightContainer);
-        newDiscoLight.AddComponent<DiscoLight>();
+        //newDiscoLight.AddComponent<DiscoLight>();
     }
     void Start()
     {
