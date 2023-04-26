@@ -2791,6 +2791,7 @@ MonoBehaviour:
   sr: {fileID: 1850786809}
   discoLightPrefab: {fileID: 5585309091352794834, guid: 66ed61011bfb0274086a140964e49630, type: 3}
   discoLightContainer: {fileID: 1726369849}
+  moshPitPrefab: {fileID: 8397592681939567359, guid: 3ac5678ca1fc2ba4ea5aba1438266724, type: 3}
 --- !u!4 &1537861064 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5585309091352794836, guid: 66ed61011bfb0274086a140964e49630, type: 3}

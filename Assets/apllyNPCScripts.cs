@@ -6,7 +6,6 @@ public class apllyNPCScripts : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    GameObject [] npcs;
     void Start()
     {
         //apply Sript to all Npcs at runtime.
