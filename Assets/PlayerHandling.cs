@@ -12,6 +12,7 @@ public class PlayerHandling : MonoBehaviour
     [SerializeField] Transform discoLightContainer;
 
     Camera mainCam;
+    SpriteRenderer backgroundSR;
     bool isDancing = false;
     bool moving = false;
     bool scaling = false;
@@ -130,6 +131,8 @@ public class PlayerHandling : MonoBehaviour
         }
         isDancing = true;
 
+        StartSpecialMove();
+
         float duration = 0.5f;
         
         int movesCounter = 0;
@@ -154,8 +157,9 @@ public class PlayerHandling : MonoBehaviour
             movesCounter++;
         }
         player.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-        StartCoroutine(moveOverTime(player.transform, origPos, 1f)); 
-
+        StartCoroutine(moveOverTime(player.transform, origPos, 1f));
+        yield return new WaitForSeconds(1f);
+        StopSpecialMove();
         isDancing = false;
     }
 
@@ -167,11 +171,38 @@ public class PlayerHandling : MonoBehaviour
         Vector3 spawnPos = new Vector3(Random.Range(bottomLeft.x, topRight.x), Random.Range(bottomLeft.y, topRight.y), 0f);
         
         GameObject newDiscoLight = Instantiate(discoLightPrefab, spawnPos, Quaternion.identity, discoLightContainer);
-        newDiscoLight.AddComponent<DiscoLight>();
+        //newDiscoLight.AddComponent<DiscoLight>();
+    }
+
+    void StartSpecialMove()
+    {
+        //Black Background
+        backgroundSR.color = Color.black;
+
+        // TODO: Stop Disco Ligths
+        foreach (Transform child in discoLightContainer)
+        {
+            DiscoLight script = child.GetComponent<DiscoLight>();
+            script.stopColorChange = true;
+        } 
+    }
+
+    void StopSpecialMove()
+    {
+        //Normal Backgroundcolor
+        backgroundSR.color = Color.white;
+
+        //Restart Disco Ligths
+        foreach (Transform child in discoLightContainer)
+        {
+            DiscoLight script = child.GetComponent<DiscoLight>();
+            script.stopColorChange = false;
+        } 
     }
     void Start()
     {
          mainCam = Camera.main;
+         backgroundSR = mainCam.GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
