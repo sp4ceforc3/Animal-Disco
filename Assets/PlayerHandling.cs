@@ -17,7 +17,9 @@ public class PlayerHandling : MonoBehaviour
     bool moving = false;
     bool scaling = false;
     bool rotating = false;
-    
+    string input;
+    float speedMod = 1f;
+    bool ninjamode = false;    
 
     IEnumerator moveOverTime(Transform objectToMove, Vector3 newPos, float duration)
     {
@@ -211,6 +213,35 @@ public class PlayerHandling : MonoBehaviour
         
         if (isDancing) return;
 
+        input = input + Input.inputString;
+
+        if(input.Contains("NINJA"))
+        {
+            ninjamode = !ninjamode;
+            if(ninjamode)
+            {
+                speedMod = 0.5f;
+                var currentColor = sr.color;
+                currentColor.a -= 0.5f;
+                sr.color = currentColor;
+            }else
+            {
+                speedMod = 1f;
+                var currentColor = sr.color;
+                currentColor.a += 0.5f;
+                sr.color = currentColor;
+            }
+            input = string.Empty;            
+        }else if(input.Contains("DOGE"))
+        {
+            input = string.Empty;
+        }else if (input.Contains("SQUIDGAME"))
+        {
+            input = string.Empty;
+        }
+
+        if (input.Length > 30)
+            input = input.Substring(9, input.Length-10);
         
         if (Input.GetKeyDown(KeyCode.Alpha1))
             StartCoroutine(DanceMoveLinusBasic());
@@ -243,7 +274,7 @@ public class PlayerHandling : MonoBehaviour
         moveVector.Normalize();
 
         // TODO: this can be used for the NINJA Cheat later
-        //moveVector = moveVector * speedMod[indexSpeedMod];
+        moveVector = moveVector * speedMod;
 
          // Frame rate independent movement
         transform.position += Time.deltaTime * speed * moveVector;
