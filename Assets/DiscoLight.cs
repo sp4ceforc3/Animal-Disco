@@ -13,10 +13,16 @@ public class DiscoLight : MonoBehaviour
     float valueMin = 0.5f;
     float valueMax = 1f;
 
+    public bool stopColorChange = false;
+
     void ChangeColor()
     {
-        sr.color = Random.ColorHSV(hueMin, hueMax, saturationMin, saturationMax, valueMin, valueMax);
+        if (!stopColorChange)
+        {
+            sr.color = Random.ColorHSV(hueMin, hueMax, saturationMin, saturationMax, valueMin, valueMax);
+        }
     }
+    
     // Start is called before the first frame update
     void Start()
     {
