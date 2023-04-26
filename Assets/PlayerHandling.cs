@@ -10,22 +10,25 @@ public class PlayerHandling : MonoBehaviour
     [SerializeField] SpriteRenderer sr;
     [SerializeField] GameObject discoLightPrefab;
     [SerializeField] Transform discoLightContainer;
+    [SerializeField] GameObject moshPitPrefab;
 
     Camera mainCam;
     SpriteRenderer backgroundSR;
+    GameObject tmpContainer;
     bool isDancing = false;
     bool moving = false;
     bool scaling = false;
     bool rotating = false;
     string input;
     float speedMod = 1f;
-    bool ninjamode = false;    
+    bool ninjamode = false;  
+    bool doMoshpit = false;  
 
     IEnumerator moveOverTime(Transform objectToMove, Vector3 newPos, float duration)
     {
         if (moving)
         {
-            yield break;
+            yield return new WaitForSeconds(duration);
         }
         moving = true;
 
@@ -205,12 +208,46 @@ public class PlayerHandling : MonoBehaviour
     {
          mainCam = Camera.main;
          backgroundSR = mainCam.GetComponentInChildren<SpriteRenderer>();
+         tmpContainer = new GameObject();
+    }
+
+    void CreateMoshpit()
+    {        
+        for (int j = 1; j <= 4; j++)
+        {
+            for(int i = 0; i < 15*j*j; i++)
+            {
+                Vector3 playerPosition = player.transform.position;
+                Vector3 spawnPos = Random.insideUnitCircle.normalized * (j+1.25f);
+                spawnPos += playerPosition;
+                GameObject newMoshpitMember = Instantiate(moshPitPrefab, spawnPos, Quaternion.identity, tmpContainer.transform);
+            }
+        }
+        
+        StartCoroutine(MoveMoshpit());
+    }
+
+    IEnumerator MoveMoshpit()
+    {
+        foreach(Transform child in tmpContainer.transform)
+        {
+            StartCoroutine(moveOverTime(child, player.transform.position, 0.25f));
+        }
+        yield return new WaitForSeconds(0.5f);
+        RemoveMoshpit();
+    }
+
+    void RemoveMoshpit()
+    {
+        foreach(Transform child in tmpContainer.transform)
+        {
+             Destroy(child.gameObject);
+        }
     }
 
     // Update is called once per frame
     void Update()
-    {
-        
+    {        
         if (isDancing) return;
 
         input = input + Input.inputString;
@@ -238,6 +275,18 @@ public class PlayerHandling : MonoBehaviour
         }else if (input.Contains("SQUIDGAME"))
         {
             input = string.Empty;
+        }else if(input.Contains("MOSHPIT"))
+        {
+            doMoshpit = !doMoshpit;
+            if (doMoshpit)
+            {
+                InvokeRepeating("CreateMoshpit", 0.5f, 1f);
+            } else
+            {
+                CancelInvoke();
+            }
+            
+            input = string.Empty;
         }
 
         if (input.Length > 30)
@@ -261,8 +310,6 @@ public class PlayerHandling : MonoBehaviour
         {
             AddDiscoLight();
         }
-
-
         Vector3 moveVector = Vector3.zero;
         
         if (Input.GetKey(KeyCode.W)) moveVector.y = 1;
