@@ -159,14 +159,15 @@ public class Npcs : MonoBehaviour
 
     void ChooseDance()
     {
-        string[] npcMoves = new string[]{ "DanceMoveDomaiBasic", "DanceMoveLinusBasic" };
+        string[] npcMoves = new string[]{ nameof(DanceMoveDomaiBasic), nameof(DanceMoveLinusBasic) };
         StartCoroutine(npcMoves[Random.Range(0, npcMoves.Length)]);
-
+        Invoke(nameof(ChooseDance), Random.Range(0.5f, 2.5f));
     }
+
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating(nameof(ChooseDance), 2f, 3f);
+        Invoke(nameof(ChooseDance), 2f);
     }
 
     // Update is called once per frame
