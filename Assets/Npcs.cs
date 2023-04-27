@@ -111,7 +111,7 @@ public class Npcs : MonoBehaviour
         isDancing = false;      
     }
 
-    IEnumerator DanceMoveDomaiBasic() {
+    private IEnumerator DanceMoveDomaiBasic() {
         if (isDancing)
             yield break;
         isDancing = true;
@@ -159,9 +159,8 @@ public class Npcs : MonoBehaviour
 
     void ChooseDance()
     {
-        // TODO: Replace with Coroutine which randomly chooses a basic dance move
-        // at the moment the other moves are missing for proper implementation
-        StartCoroutine(DanceMoveDomaiBasic());
+        string[] npcMoves = new string[]{ "DanceMoveDomaiBasic", "DanceMoveLinusBasic" };
+        StartCoroutine(npcMoves[Random.Range(0, npcMoves.Length)]);
 
     }
     // Start is called before the first frame update
