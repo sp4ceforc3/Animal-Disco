@@ -15,12 +15,13 @@ public class DiscoLight : MonoBehaviour
 
     public bool stopColorChange = false;
 
-    void ChangeColor()
-    {
-        if (!stopColorChange)
-        {
-            sr.color = Random.ColorHSV(hueMin, hueMax, saturationMin, saturationMax, valueMin, valueMax);
-        }
+    private void ChangeColor() {
+        ChangeColor(Random.ColorHSV(hueMin, hueMax, saturationMin, saturationMax, valueMin, valueMax));
+    }
+
+    public void ChangeColor(Color? color = null) {
+        if (!stopColorChange && color != null)
+            sr.color = color.GetValueOrDefault();             
     }
     
     // Start is called before the first frame update
@@ -28,7 +29,7 @@ public class DiscoLight : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();  
         sr.color = Random.ColorHSV(hueMin, hueMax, saturationMin, saturationMax, valueMin, valueMax);      
-        InvokeRepeating(nameof(ChangeColor), Random.Range(0.5f, 1.5f), 5f);
+        InvokeRepeating(nameof(ChangeColor), Random.Range(0.5f, 1.5f), 0.5f);
     }
 
     // Update is called once per frame

@@ -5,9 +5,11 @@ using UnityEngine;
 public class Npcs : MonoBehaviour
 {
     bool isDancing = false;
-    bool moving = false;
-    bool scaling = false;
-    bool rotating = false;
+    bool moving    = false;
+    bool scaling   = false;
+    bool rotating  = false;
+
+    public bool squidgame = false;
     
     IEnumerator moveOverTime(Transform objectToMove, Vector3 newPos, float duration)
     {
@@ -158,7 +160,9 @@ public class Npcs : MonoBehaviour
     }
 
     void ChooseDance()
-    {
+    { 
+        if (squidgame)
+            Destroy(gameObject, 1f);
         string[] npcMoves = new string[]{ nameof(DanceMoveDomaiBasic), nameof(DanceMoveLinusBasic) };
         StartCoroutine(npcMoves[Random.Range(0, npcMoves.Length)]);
         Invoke(nameof(ChooseDance), Random.Range(0.5f, 2.5f));

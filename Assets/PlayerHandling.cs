@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHandling : MonoBehaviour
 {
@@ -10,19 +11,21 @@ public class PlayerHandling : MonoBehaviour
     [SerializeField] SpriteRenderer sr;
     [SerializeField] GameObject discoLightPrefab;
     [SerializeField] Transform discoLightContainer;
+    [SerializeField] Transform npcsContainer;
     [SerializeField] GameObject moshPitPrefab;
 
     Camera mainCam;
     SpriteRenderer backgroundSR;
     GameObject tmpContainer;
     bool isDancing = false;
-    bool moving = false;
-    bool scaling = false;
-    bool rotating = false;
-    string input;
+    bool moving    = false;
+    bool scaling   = false;
+    bool rotating  = false;
+    string input   = "";
     float speedMod = 1f;
     bool ninjamode = false;  
     bool doMoshpit = false;  
+    bool squidgame = false;
 
     IEnumerator moveOverTime(Transform objectToMove, Vector3 newPos, float duration)
     {
@@ -168,6 +171,19 @@ public class PlayerHandling : MonoBehaviour
         isDancing = false;
     }
 
+    // private IEnumerator DanceMoveDomaiAdvanced() {
+    //     if (isDancing)
+    //         yield break;
+    //     isDancing = true;
+
+    //     StartCoroutine(_danceMoveDomaiAdvanced(player));
+
+    //     yield return new WaitForSeconds(3f);
+    //     isDancing = false;  
+    // }
+
+    //private IEnumerator _danceMoveDomaiAdvanced(GameObject player) {}
+
     void AddDiscoLight()
     {
         Vector3 bottomLeft = mainCam.ViewportToWorldPoint(Vector3.zero);
@@ -245,6 +261,39 @@ public class PlayerHandling : MonoBehaviour
         }
     }
 
+    private void _squidGameRed(bool redLigth) {
+
+        if (redLigth) 
+            squidgame = true;
+        else 
+            squidgame = false;
+
+        foreach (Transform child in discoLightContainer) {
+            DiscoLight ligth = child.GetComponent<DiscoLight>();
+            ligth.stopColorChange = false;
+            if (redLigth)
+                ligth.ChangeColor(Color.red);
+            else 
+                ligth.ChangeColor(Color.green);
+            ligth.stopColorChange = true;
+        } 
+
+        foreach (Transform child in npcsContainer) {
+            Npcs npc = child.GetComponent<Npcs>();
+            if (redLigth) 
+                npc.squidgame = true;
+            else 
+                npc.squidgame = false;
+        }
+    }
+
+    private void SquidGame() {
+        if (Random.value < 0.5f)
+            _squidGameRed(true);
+        else
+            _squidGameRed(false);
+    }
+
     // Update is called once per frame
     void Update()
     {        
@@ -252,8 +301,7 @@ public class PlayerHandling : MonoBehaviour
 
         input = input + Input.inputString;
 
-        if(input.Contains("NINJA"))
-        {
+        if(input.Contains("NINJA")) {
             ninjamode = !ninjamode;
             if(ninjamode)
             {
@@ -269,14 +317,15 @@ public class PlayerHandling : MonoBehaviour
                 sr.color = currentColor;
             }
             input = string.Empty;            
-        }else if(input.Contains("DOGE"))
-        {
+        }
+        else if(input.Contains("DOGE")) {
             input = string.Empty;
-        }else if (input.Contains("SQUIDGAME"))
-        {
-            input = string.Empty;
-        }else if(input.Contains("MOSHPIT"))
-        {
+        }
+        else if (input.Contains("SQUIDGAME")) {
+            InvokeRepeating(nameof(SquidGame), 0f, 1.5f);
+            input = string.Empty; 
+        }
+        else if(input.Contains("MOSHPIT")) {
             doMoshpit = !doMoshpit;
             if (doMoshpit)
             {
@@ -312,10 +361,26 @@ public class PlayerHandling : MonoBehaviour
         }
         Vector3 moveVector = Vector3.zero;
         
-        if (Input.GetKey(KeyCode.W)) moveVector.y = 1;
-        if (Input.GetKey(KeyCode.A)) moveVector.x = -1;
-        if (Input.GetKey(KeyCode.S)) moveVector.y = -1;
-        if (Input.GetKey(KeyCode.D)) moveVector.x = 1;
+        if (Input.GetKey(KeyCode.W)) {
+            if (squidgame)
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            moveVector.y = 1;
+        }
+        if (Input.GetKey(KeyCode.A)) {
+            if (squidgame)
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            moveVector.x = -1;
+        }
+        if (Input.GetKey(KeyCode.S)) {
+            if (squidgame)
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            moveVector.y = -1;
+        }
+        if (Input.GetKey(KeyCode.D)) {
+            if (squidgame)
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            moveVector.x = 1;
+        } 
 
         // Normalize vector, so that magnitude for diagonal movement is also 1
         moveVector.Normalize();
