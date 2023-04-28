@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Npcs : MonoBehaviour
 {
-    bool isDancing = false;
+    
     bool moving    = false;
     bool scaling   = false;
     bool rotating  = false;
 
+    public bool isDancing = false;
     public SpriteRenderer sr;
     public Sprite normalLook;
 

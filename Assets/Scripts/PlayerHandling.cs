@@ -420,6 +420,32 @@ public class PlayerHandling : MonoBehaviour
             
             input = string.Empty;
         }
+        else if(input.Contains("CONFETTI")) {
+
+            isDancing = true;
+            foreach (Transform child in npcsContainer) {
+                Npcs npc = child.GetComponent<Npcs>();
+                npc.isDancing = true;
+            }
+
+            for (int i = 0; i < 500; i++) {
+                AddDiscoLight();
+
+                foreach (Transform child in discoLightContainer) {
+                    DiscoLight ligth = child.GetComponent<DiscoLight>();
+                    Vector3 oldPos = ligth.transform.position;
+                    StartCoroutine(moveOverTime(ligth.transform, new Vector3(oldPos.x += Random.value, oldPos.y -= Random.value, oldPos.z), 0.5f));
+                } 
+            }
+
+            foreach (Transform child in npcsContainer) {
+                Npcs npc = child.GetComponent<Npcs>();
+                npc.isDancing = false;
+            }
+            isDancing = false;
+
+            input = string.Empty;
+        }
 
         if (input.Length > 30)
             input = input.Substring(9, input.Length-10);
