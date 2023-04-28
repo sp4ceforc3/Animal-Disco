@@ -85,7 +85,7 @@ public class PlayerHandling : MonoBehaviour
     }
 
     // from https://stackoverflow.com/questions/37586407/rotate-gameobject-over-time
-    IEnumerator rotateObject(GameObject gameObjectToMove, Quaternion newRot, Quaternion oldRot, float duration)
+    IEnumerator rotateOverTime(GameObject gameObjectToMove, Quaternion newRot, Quaternion oldRot, float duration)
     {
 
         if (rotating)
@@ -114,6 +114,17 @@ public class PlayerHandling : MonoBehaviour
         }
 
         rotating = false;
+    }
+
+    void AddDiscoLight()
+    {
+        Vector3 bottomLeft = mainCam.ViewportToWorldPoint(Vector3.zero);
+        Vector3 topRight = mainCam.ViewportToWorldPoint(Vector3.one);
+
+        Vector3 spawnPos = new Vector3(Random.Range(bottomLeft.x, topRight.x), Random.Range(bottomLeft.y, topRight.y), 0f);
+        
+        GameObject newDiscoLight = Instantiate(discoLightPrefab, spawnPos, Quaternion.identity, discoLightContainer);
+        //newDiscoLight.AddComponent<DiscoLight>();
     }
 
     IEnumerator DanceMoveLinusBasic()
@@ -172,28 +183,81 @@ public class PlayerHandling : MonoBehaviour
         isDancing = false;
     }
 
-    // private IEnumerator DanceMoveDomaiAdvanced() {
-    //     if (isDancing)
-    //         yield break;
-    //     isDancing = true;
 
-    //     StartCoroutine(_danceMoveDomaiAdvanced(player));
+    private IEnumerator DanceMoveDomaiBasic() {
+        if (isDancing)
+            yield break;
+        isDancing = true;
 
-    //     yield return new WaitForSeconds(3f);
-    //     isDancing = false;  
-    // }
+        StartCoroutine(_danceMoveDomaiBasic(player.transform, new Vector3(0.5f, 2f, 1f), 0.2f));
+        yield return new WaitForSeconds(0.6f);
 
-    //private IEnumerator _danceMoveDomaiAdvanced(GameObject player) {}
+        isDancing = false;      
+    }
 
-    void AddDiscoLight()
-    {
-        Vector3 bottomLeft = mainCam.ViewportToWorldPoint(Vector3.zero);
-        Vector3 topRight = mainCam.ViewportToWorldPoint(Vector3.one);
-
-        Vector3 spawnPos = new Vector3(Random.Range(bottomLeft.x, topRight.x), Random.Range(bottomLeft.y, topRight.y), 0f);
+    private IEnumerator _danceMoveDomaiBasic(Transform objectToScale, Vector3 stretch, float split) {
+        if (scaling)
+            yield break;
+        scaling = true;
         
-        GameObject newDiscoLight = Instantiate(discoLightPrefab, spawnPos, Quaternion.identity, discoLightContainer);
-        //newDiscoLight.AddComponent<DiscoLight>();
+        Vector3 returnScale = objectToScale.localScale;
+        Vector3 stretchX = new Vector3(stretch.x, 0.5f, 1f);
+        Vector3 stretchY = new Vector3(1f, stretch.y, 1f);
+
+        float counter = 0f;
+        while (counter < split) {
+            counter += Time.deltaTime;
+            objectToScale.localScale = Vector3.Lerp(returnScale, stretchX, counter / split);
+            yield return null;
+        }
+
+        counter = 0f;
+        Vector3 startScale = objectToScale.localScale;
+        while (counter < split) {
+            counter += Time.deltaTime;
+            objectToScale.localScale = Vector3.Lerp(startScale, stretchY, counter / split);
+            yield return null;
+        }
+
+        counter = 0f;
+        startScale = objectToScale.localScale;
+        while (counter < split) {
+            counter += Time.deltaTime;
+            objectToScale.localScale = Vector3.Lerp(startScale, returnScale, counter / split);
+            yield return null;
+        }
+
+        scaling = false;
+    }
+
+    private IEnumerator DanceMoveDomaiAdvanced() {
+        if (isDancing)
+            yield break;
+        isDancing = true;
+
+        StartSpecialMove();
+
+        Vector3 oldPos    = player.transform.position;
+        Quaternion oldRot = player.transform.rotation;
+
+        StartCoroutine(_danceMoveDomaiBasic(player.transform, new Vector3(2f, 2f, 1f), 0.42f));
+        StartCoroutine(moveOverTime(player.transform, new Vector3(oldPos.x += 2f, oldPos.y, oldPos.z), 0.88f));
+        StartCoroutine(rotateOverTime(player, Quaternion.Euler(new Vector3(0f, 0f, 180)), oldRot, 0.23f));
+        yield return new WaitForSeconds(1f);
+
+        StartCoroutine(_danceMoveDomaiBasic(player.transform, new Vector3(0.5f, 2f, 1f), 0.42f));
+        StartCoroutine(moveOverTime(player.transform, oldPos, 0.88f));
+        
+        StartCoroutine(_danceMoveDomaiBasic(player.transform, new Vector3(2f, 2f, 1f), 0.42f));
+        StartCoroutine(moveOverTime(player.transform, new Vector3(oldPos.x -= 2f, oldPos.y, oldPos.z), 0.88f));
+        yield return new WaitForSeconds(1f);
+
+        StartCoroutine(_danceMoveDomaiBasic(player.transform, new Vector3(2f, 2f, 1f), 0.2f));
+        StartCoroutine(rotateOverTime(player, Quaternion.Euler(new Vector3(0f, 0f, -180)), oldRot, 0.4f));
+
+        yield return new WaitForSeconds(1f);
+        StopSpecialMove();
+        isDancing = false;  
     }
 
     void StartSpecialMove()
@@ -220,12 +284,6 @@ public class PlayerHandling : MonoBehaviour
             DiscoLight script = child.GetComponent<DiscoLight>();
             script.stopColorChange = false;
         } 
-    }
-    void Start()
-    {
-         mainCam = Camera.main;
-         backgroundSR = mainCam.GetComponentInChildren<SpriteRenderer>();
-         tmpContainer = new GameObject();
     }
 
     void CreateMoshpit()
@@ -262,6 +320,14 @@ public class PlayerHandling : MonoBehaviour
         }
     }
 
+    // Cheat code: "SQUIDGAME"
+    private void SquidGame() {
+        if (Random.value < 0.5f)
+            _squidGameRed(true);
+        else
+            _squidGameRed(false);
+    }
+
     private void _squidGameRed(bool redLigth) {
 
         if (redLigth) 
@@ -288,11 +354,12 @@ public class PlayerHandling : MonoBehaviour
         }
     }
 
-    private void SquidGame() {
-        if (Random.value < 0.5f)
-            _squidGameRed(true);
-        else
-            _squidGameRed(false);
+    // At game start / first frame
+    void Start()
+    {
+         mainCam = Camera.main;
+         backgroundSR = mainCam.GetComponentInChildren<SpriteRenderer>();
+         tmpContainer = new GameObject();
     }
 
     // Update is called once per frame
@@ -359,17 +426,21 @@ public class PlayerHandling : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Alpha1))
             StartCoroutine(DanceMoveLinusBasic());
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-            StartCoroutine(DanceMoveLinusAdvanced());
-        //Dummy/Test Move at the moment
         if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            //StartCoroutine(scaleOverTime(player.transform, new Vector3(1.5f, 1.5f, 1f), new Vector3(1f, 1f, 1f), 0.5f));
-            //from https://stackoverflow.com/questions/37586407/rotate-gameobject-over-time
-            Quaternion rotation2 = Quaternion.Euler(new Vector3(0f, 0f, 180));
-            Quaternion oldRotation = player.transform.rotation;
-            StartCoroutine(rotateObject(player, rotation2, oldRotation, 1f));
-        }
+            StartCoroutine(DanceMoveDomaiBasic());
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+            StartCoroutine(DanceMoveLinusAdvanced());
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+            StartCoroutine(DanceMoveDomaiAdvanced());
+        //Dummy/Test Move at the moment
+        // if (Input.GetKeyDown(KeyCode.Alpha2))
+        // {
+        //     //StartCoroutine(scaleOverTime(player.transform, new Vector3(1.5f, 1.5f, 1f), new Vector3(1f, 1f, 1f), 0.5f));
+        //     //from https://stackoverflow.com/questions/37586407/rotate-gameobject-over-time
+        //     Quaternion rotation2 = Quaternion.Euler(new Vector3(0f, 0f, 180));
+        //     Quaternion oldRotation = player.transform.rotation;
+        //     StartCoroutine(rotateOverTime(player, rotation2, oldRotation, 1f));
+        // }
 
         if (Input.GetKeyDown(KeyCode.F))
         {
